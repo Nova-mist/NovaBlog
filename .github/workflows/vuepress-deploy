@@ -15,4 +15,4 @@ jobs:
         TARGET_BRANCH: main
         BUILD_SCRIPT: yarn && yarn docs:build
         BUILD_DIR: docs/.vuepress/dist
-        CNAME: https://nova-mist.github.io/novablog
+        CNAME: https://nova-mist.github.io/nova-blog
