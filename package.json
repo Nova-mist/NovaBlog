@@ -10,6 +10,7 @@
   "scripts": {
     "docs:dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
     "docs:build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
-    "docs:nav": "vuepress nav docs -f"
+    "docs:nav": "vuepress nav docs -f",
+    "deploy": "bash deploy.sh"
   }
 }
