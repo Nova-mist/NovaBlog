@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql-实践 | Nova Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="我那摊大饼一样的零散学习笔记">
+    
+    <link rel="preload" href="/NovaBlog/assets/css/0.styles.26d8bde2.css" as="style"><link rel="preload" href="/NovaBlog/assets/js/app.ce862583.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/2.6539ea43.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/10.8d389b09.js" as="script"><link rel="prefetch" href="/NovaBlog/assets/js/11.31a5e32c.js"><link rel="prefetch" href="/NovaBlog/assets/js/3.436f90cb.js"><link rel="prefetch" href="/NovaBlog/assets/js/4.854c56f8.js"><link rel="prefetch" href="/NovaBlog/assets/js/5.f7ccee55.js"><link rel="prefetch" href="/NovaBlog/assets/js/6.14027d31.js"><link rel="prefetch" href="/NovaBlog/assets/js/7.92e72e21.js"><link rel="prefetch" href="/NovaBlog/assets/js/8.f8abd0b5.js"><link rel="prefetch" href="/NovaBlog/assets/js/9.88939b03.js">
+    <link rel="stylesheet" href="/NovaBlog/assets/css/0.styles.26d8bde2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/NovaBlog/" class="home-link router-link-active"><!----> <span class="site-name">Nova Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>My SQL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/NovaBlog/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/" aria-current="page" class="sidebar-link">Mysql</a></li><li><a href="/NovaBlog/数据库/MySQL/mysql-note.html" class="sidebar-link">mysql-note</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#事务" class="sidebar-link">事务</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#事务的概念" class="sidebar-link">事务的概念</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#事务的四种隔离级别" class="sidebar-link">事务的四种隔离级别</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#mysql-中的事务隔离级别" class="sidebar-link">MySQL 中的事务隔离级别</a></li></ul></li><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#操作表" class="sidebar-link">操作表</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/数据库/MySQL/mysql-note.html#基本类型" class="sidebar-link">基本类型</a></li></ul></li><li><a href="/NovaBlog/数据库/MySQL/mysql-实践.html" class="active sidebar-link">mysql-实践</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql-实践"><a href="#mysql-实践" class="header-anchor">#</a> mysql-实践</h1> <p>🟢<code>count()</code> 统计行数，要与分组 <code>group by</code> 搭配使用。</p> <p><code>sum()</code> 求一列的和，要与分组 <code>group by</code> 搭配使用。</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT book_name, COUNT(unit_price) FROM book GROUP BY book_name;
+
+SELECT book_name, SUM(unit_price) FROM book GROUP BY book_name;
+
+# 统计每个id有多少xx
+select id, count(id) from xx group by id; 
+</code></pre></div><p><strong>一个笔试题，降序索引用降序查询效率高。</strong></p> <p><a href="https://blog.csdn.net/u013712847/article/details/52161008" target="_blank" rel="noopener noreferrer">数据库学习记录809_<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-mysql extra-class"><pre class="language-text"><code>create table T{
+k int unsigned not null auto_increment,
+a date,
+b varchar(24),
+c int,d varchar(24),
+primary key(k),unique key a_index (a DESC,b DESC),
+key k1(b),key k2(c),key k3(d));
+# 注意 命令不全
+</code></pre></div><p>🟠primary key 和 unique key 的区别：</p> <ul><li>primary key 用来区别表中唯一的行，unique key 用来保证不是主键的列的每一行是不重复的。</li> <li>primary key 不能有NULL，unique key 可以有一个NULL。</li> <li>primary key 唯一，unique key 可以有多个。</li> <li>只有 primary key 支持<strong>自增</strong>，只有 unique key 支持<strong>修改</strong>。</li> <li>❓primary  Creates clustered index，unique key Creates non-clustered index.</li></ul> <p><a href="https://www.geeksforgeeks.org/difference-between-primary-key-and-unique-key/" target="_blank" rel="noopener noreferrer">Difference between Primary key and Unique key - GeeksforGeeks<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/2/2022, 8:01:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/NovaBlog/数据库/MySQL/mysql-note.html" class="prev">
+        mysql-note
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/NovaBlog/assets/js/app.ce862583.js" defer></script><script src="/NovaBlog/assets/js/2.6539ea43.js" defer></script><script src="/NovaBlog/assets/js/10.8d389b09.js" defer></script>
+  </body>
+</html>

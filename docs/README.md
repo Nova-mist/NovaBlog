@@ -1,5 +1,7 @@
 # Hello VuePress
 
+![blog-image-20220928-1664354739](https://cdn.jsdelivr.net/gh/Nova-mist/HexoBlogResources/images/2022/202209281646816.jpg)
+
 ## 搭建时候一些注意点
 
 1. 先看 [文档](https://vuepress.vuejs.org/zh/guide/getting-started.html)，**要跟着文章来搭建**。
@@ -71,3 +73,21 @@
 
 3. 如果需要额外特性，查看 [此插件文档](https://shanyuhai123.github.io/vuepress-plugin-auto-sidebar/features/plugin-options.html#overview)。
 
+### 设置项目 git
+
+开启 git 功能既可以便于文章管理也可以通过配置 `themeConfig.lastUpdated` 使用**显示最后更新时间**的功能。
+
+```bash
+git init
+```
+
+记得要添加 `.gitignore` 忽略 node 包文件
+
+```.gitignore
+node_modules
+```
+
+## 参考
+
+- [介绍 | VuePress (vuejs.org)](https://vuepress.vuejs.org/zh/guide/)
+- [【啰里啰嗦】一步步搭建 VuePress 及优化_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1vb411m7NY/)
