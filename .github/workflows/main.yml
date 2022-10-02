@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.0
+        
+      - name: Install
+        run: |
+          npm ci
+          npm i yarn
+          yarn && yarn docs:build
