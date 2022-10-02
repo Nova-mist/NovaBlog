@@ -1,7 +1,7 @@
 const navConfig = require("./nav.js");
 
 module.exports = {
-  base: "/gh-pages-test/",
+  base: "/nova-blog/",
   title: "Nova Blog",
   description: "我那摊大饼一样的零散学习笔记",
 
