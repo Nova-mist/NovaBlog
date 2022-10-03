@@ -87,7 +87,49 @@ git init
 node_modules
 ```
 
+## 部署
+
+### GitHub Pages + 手动构建
+
+通过编写一个自动化脚本，在本地自动构建后推送到远程仓库并由 GitHub Pages 托管。
+
+✅ 很简单，就像我之前用过的 `hexo` 一样，也是只推送构建好的静态文件。
+
+### GitHub Pages + GitHub Actions
+
+1. 创建一个 GitHub Actions，具体内容见下。
+2. 将文章修改推送到远程仓库 `main` 分支时，GitHub Actions 会自动构建新的静态页面然后推送到 `gh-pages` 分支。
+3. 设置 GitHub Pages 托管 `gh-pages`
+
+`vuepress-deploy.yml`
+
+```yaml
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{  secrets.ACCESS_TOKEN  }}
+        BUILD_SCRIPT: yarn && yarn docs:build
+        BUILD_DIR: docs/.vuepress/dist
+
+```
+
+使用 `secrets.ACCESS_TOKEN` 之前需要做的步骤：
+
+1. 获取 *Personal access token*
+2. 在该仓库设置页面的 *Secrets* 选项，创建一个 `ACCESS_TOKEN` 值，这样 Actions 就可以获取到。
+
 ## 参考
 
 - [介绍 | VuePress (vuejs.org)](https://vuepress.vuejs.org/zh/guide/)
 - [【啰里啰嗦】一步步搭建 VuePress 及优化_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1vb411m7NY/)
+- [部署 | VuePress (vuejs.org)](https://vuepress.vuejs.org/zh/guide/deploy.html#github-pages)
+- [jenkey2011/vuepress-deploy: A GitHub Action to build and deploy Vuepress sites to GitHub Pages](https://github.com/jenkey2011/vuepress-deploy/)
