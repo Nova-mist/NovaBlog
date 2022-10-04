@@ -1,15 +1,24 @@
 module.exports = [
   {
-    text: "数据库",
-    items: [
+    "text": "Java",
+    "items": [
       {
-        text: "My SQL",
-        link: "/数据库/MySQL/",
-      },
-      {
-        text: "Redis",
-        link: "/数据库/Redis/",
-      },
-    ],
+        "text": "Spring Boot",
+        "link": "/Java/SpringBoot/"
+      }
+    ]
   },
+  {
+    "text": "数据库",
+    "items": [
+      {
+        "text": "My SQL",
+        "link": "/数据库/MySQL/"
+      },
+      {
+        "text": "Redis",
+        "link": "/数据库/Redis/"
+      }
+    ]
+  }
 ];
