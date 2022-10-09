@@ -12,13 +12,11 @@ tags:
 
 <!-- more -->
 
-
-
 ## Web开发前概
 
->   回顾：SpringBoot自动配置了什么？如何手动修改、添加配置？
+> 回顾：SpringBoot自动配置了什么？如何手动修改、添加配置？
 >
->   根据pom.xml中默认的启动器自动配置了相应的组件。可以通过添加启动器来增加组件，可以在配置文件中修改关联的组件的属性。
+> 根据pom.xml中默认的启动器自动配置了相应的组件。可以通过添加启动器来增加组件，可以在配置文件中修改关联的组件的属性。
 
 **xxxxAutoConfigurartion：自动配置类，给容器中添加组件。**
 
@@ -26,18 +24,18 @@ tags:
 
 要解决的问题：
 
--   静态资源导入
--   首页index
--   没有写jsp的地方，所以要用模板引擎Thymeleaf
--   数据库的增删改查
--   拦截器
--   语言切换
+- 静态资源导入
+- 首页index
+- 没有写jsp的地方，所以要用模板引擎Thymeleaf
+- 数据库的增删改查
+- 拦截器
+- 语言切换
 
 ## 静态资源导入
 
 ### 映射规则源码
 
->   SpringMVC的web配置都在 WebMvcAutoConfiguration 这个配置类里面。
+> SpringMVC的web配置都在 WebMvcAutoConfiguration 这个配置类里面。
 
 **（查看代码的过程）**WebMvcAutoConfiguration --> 内部静态类WebMvcAutoConfigurationAdapter --> **方法addResourceHandlers** --> 方法getStaticLocations --> 数组staticLocations --> CLASSPATH_RESOURCE_LOCATIONS
 
@@ -98,16 +96,16 @@ private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {
 addResourceHandler(registry, "/webjars/**", "classpath:/META-INF/resources/webjars/");
 ```
 
-所以访问 http://localhost:8080/webjars/jquery/3.6.0/jquery.js 就可以获取到静态资源文件。
+所以访问 <http://localhost:8080/webjars/jquery/3.6.0/jquery.js> 就可以获取到静态资源文件。
 
 ### 导入自己的静态资源
 
 **静态资源目录优先级**：(classpath:/ 路径就是原有的resources目录)
 
--   `classpath:/META-INF/resources/`
--   `classpath:/resources/` (**即 resources/resources/**)
--   `classpath:/static/`
--   `classpath:/public/`
+- `classpath:/META-INF/resources/`
+- `classpath:/resources/` (**即 resources/resources/**)
+- `classpath:/static/`
+- `classpath:/public/`
 
 静态资源会根据优先级进行覆盖或补全独有。
 
@@ -119,7 +117,7 @@ addResourceHandler(registry, "/webjars/**", "classpath:/META-INF/resources/webja
 private String staticPathPattern = "/**";
 ```
 
-结合映射webjars的代码可知，方法getStaticLocations返回的locations会映射到pattern即 `/**` ，所以访问 http://localhost:8080/test.js 就会得到静态资源文件。
+结合映射webjars的代码可知，方法getStaticLocations返回的locations会映射到pattern即 `/**` ，所以访问 <http://localhost:8080/test.js> 就会得到静态资源文件。
 
 ![image-20220304184324028](https://cdn.jsdelivr.net/gh/Nova-mist/HexoBlogResources@main/images/2022/image-20220304184324028.png)
 
@@ -133,10 +131,8 @@ spring.web.resources.static-locations=classpath:/coding/,classpath:/ysama/
 
 **注意：**
 
--   **由源码可知，如果自定义了静态资源路径，那么默认的配置将会失效。**
--   **在新的静态资源路径中，根据配置内容的先后存在优先级。**
-
-
+- **由源码可知，如果自定义了静态资源路径，那么默认的配置将会失效。**
+- **在新的静态资源路径中，根据配置内容的先后存在优先级。**
 
 ## 首页处理
 
@@ -159,22 +155,20 @@ public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext ap
 
 ![image-20220304193459147](https://cdn.jsdelivr.net/gh/Nova-mist/HexoBlogResources@main/images/2022/image-20220304193459147.png)
 
-**上文静态资源路径（自定义或默认）下的index.html页面就会被 `/**` 映射。**即访问 http://localhost:8080/ 就会显示index.html的内容。
+**上文静态资源路径（自定义或默认）下的index.html页面就会被 `/**` 映射。**即访问 <http://localhost:8080/> 就会显示index.html的内容。
 
 **网站图标的设置：**
 
-1.   ~~关闭SpringBoot默认图标~~
+1. ~~关闭SpringBoot默认图标~~
 
      ```properties
      #关闭默认图标
      spring.mvc.favicon.enabled=false
      ```
 
-2.   **直接将图标放在静态资源目录下 favicon.ico**
+2. **直接将图标放在静态资源目录下 favicon.ico**
 
-3.   Ctrl+F5刷新浏览器缓存
-
-
+3. Ctrl+F5刷新浏览器缓存
 
 ## Thymeleaf模板引擎
 
@@ -182,8 +176,8 @@ public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext ap
 
 使用模板引擎的原因：
 
--   SpringBoot项目是以jar包的方式打包而不是war包
--   使用的是嵌入式的Tomcat
+- SpringBoot项目是以jar包的方式打包而不是war包
+- 使用的是嵌入式的Tomcat
 
 **SpringBoot默认不支持jsp**
 
@@ -206,9 +200,9 @@ public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext ap
 Maven会自动导入所需的jar包。
 ![image-20220304205419740](https://cdn.jsdelivr.net/gh/Nova-mist/HexoBlogResources@main/images/2022/image-20220304205419740.png)
 
-**编写一个Controller进行测试并将test.html放在templates目录下**
+**编写一个Controller进行测试并将test.html放在 `resources/templates` 目录**
 
->   在templates目录下的所有页面，只能通过controller来跳转，这个功能需要模板引擎的支持，例如thymeleaf。
+> 在templates目录下的所有页面，只能通过controller来跳转，这个功能需要模板引擎的支持，例如thymeleaf。
 
 ```java
 @Controller
@@ -221,7 +215,7 @@ public class HelloController {
 }
 ```
 
-访问 http://localhost:8080/hello
+访问 <http://localhost:8080/hello>
 
 ### 分析原理
 
@@ -232,10 +226,10 @@ Shift+Shift 搜索属性类ThymeleafProperties，可以看到默认的前后缀�
 ```java
 @ConfigurationProperties(prefix = "spring.thymeleaf")
 public class ThymeleafProperties {
-	private static final Charset DEFAULT_ENCODING = StandardCharsets.UTF_8;
-	public static final String DEFAULT_PREFIX = "classpath:/templates/";
-	public static final String DEFAULT_SUFFIX = ".html";
-	// ...
+ private static final Charset DEFAULT_ENCODING = StandardCharsets.UTF_8;
+ public static final String DEFAULT_PREFIX = "classpath:/templates/";
+ public static final String DEFAULT_SUFFIX = ".html";
+ // ...
 }
 ```
 
@@ -332,4 +326,3 @@ public class HelloController {
     }
 }
 ```
-
