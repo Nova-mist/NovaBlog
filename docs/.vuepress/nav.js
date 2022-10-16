@@ -9,6 +9,15 @@ module.exports = [
     ]
   },
   {
+    "text": "中间件",
+    "items": [
+      {
+        "text": "ELK",
+        "link": "/中间件/ELK/"
+      }
+    ]
+  },
+  {
     "text": "数据库",
     "items": [
       {
