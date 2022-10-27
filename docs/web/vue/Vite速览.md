@@ -70,42 +70,41 @@ VSCode 插件：
 
 
 
+❤️**使用步骤**
+
 ```bash
 npm init vite@latest
 npm install --save-dev --save-exact prettier
 echo {}> .prettierrc.json
 npm install --save-dev eslint eslint-plugin-vue
+echo > .eslintrc.cjs
+
+# eslint和prettier共存时使用后者来格式化代码
+npm install eslint-config-prettier --save-dev
+
+# 将错误显示在页面
+npm install vite-plugin-eslint --save-dev
 ```
 
 ```js
 //.eslintrc.cjs
 module.exports = {
-  env: {
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-recommended',
-  ],
-  rules: {
-    // override/add rules settings here, such as:
-    // 'vue/no-unused-vars': 'error'
-  }
+    env: {
+        node: true,
+    },
+    extends: [
+        'eslint:recommended',
+        "plugin:vue/vue3-recommended",
+        "prettier"
+    ],
+    rules: {
+        // override/add rules settings here, such as:
+        // 'vue/no-unused-vars': 'error'
+    }
 }
 ```
 
-```bash
-npm install eslint-config-prettier --save-dev
-```
-
-```js
-//.eslintrc.cjs
-extends: [
-  'eslint:recommended',
-  "plugin:vue/vue3-recommended",
-  "prettier"
-],
-```
+【只需设置一次全局】VSCode 的配置：
 
 ```json
 // Code/User/settings.json
@@ -123,10 +122,6 @@ extends: [
 "[javascript]": {
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 },
-```
-
-```bash
-npm install vite-plugin-eslint --save-dev
 ```
 
 
