@@ -345,3 +345,62 @@ ul {
 ## TODO
 
 position: absolute
+
+
+
+
+
+## vue 工程的 width / height
+
+因为 vue app 是挂载到 `<div id="app">` 上的：
+
+1. 此 div 内部的内容不会显示？
+
+2. **最好的设置宽高的方法**：在此 div 上显式指定：
+
+   ```css
+   #app {
+     /* max-width: 1280px; */
+     /* margin: 0 auto; */
+     /* padding: 2rem; */
+       
+     text-align: center;
+       
+     background-color: limegreen;
+       
+     width: 100vw;
+     height: 100vh;
+   }
+   ```
+
+   所有子组件的宽高设置都参照此根组件的宽高**数值**。
+
+✅子组件中的 `<div>` 标签因为默认的 `width: auto` 会填充父标签（height 则是适应子元素），所以只需要显示设置 `height: 100%`
+
+```cs
+/* <div id="app">下的<div> */
+.main-layout {
+  background-color: burlywood;
+  // width: auto 默认值，按需显式指定 70% ...
+  height: 100%;
+}
+```
+
+
+
+
+
+## 宽高基础
+
+1. `width / height: 100%` 指的是父标签 width / height 百分比数值，如果父标签的属性也是相对的，就继续向上找到具体的 px 数值。
+2. `vh / vw` 指的是窗口的宽高，是具体的 px 数值。
+3. 对于普通的 `<div>` ，默认宽是填充父标签，高是适应子元素。
+
+
+
+> - width 默认值是 auto
+>   - **display 是 block 时，widht 的 auto 就相当于 fill**。像html、body、div，这些默认都会撑满屏幕，达到100vw的效果。
+>   - display 是 inline-block，width 的 auto 相当于fit-content。
+> - **height 默认值是 auto，高度由子元素决定** 
+> - display = ‘inline’，设置 `width` / `height`无效。
+> - div 默认 `display: block; width: auto; height: auto`

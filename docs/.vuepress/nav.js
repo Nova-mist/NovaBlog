@@ -3,6 +3,10 @@ module.exports = [
     "text": "Java",
     "items": [
       {
+        "text": "Spring",
+        "link": "/Java/Spring/"
+      },
+      {
         "text": "Spring Boot",
         "link": "/Java/SpringBoot/"
       },
@@ -69,6 +73,27 @@ module.exports = [
       {
         "text": "Redis",
         "link": "/数据库/Redis/"
+      }
+    ]
+  },
+  {
+    "text": "算法",
+    "items": [
+      {
+        "text": "其他",
+        "link": "/算法/其他/"
+      },
+      {
+        "text": "动规",
+        "link": "/算法/动规/"
+      },
+      {
+        "text": "贪心",
+        "link": "/算法/贪心/"
+      },
+      {
+        "text": "链表二叉树",
+        "link": "/算法/链表二叉树/"
       }
     ]
   }
