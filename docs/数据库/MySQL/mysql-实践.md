@@ -1,6 +1,6 @@
 # mysql-实践
 
-
+## 习题
 
 🟢`count()` 统计行数，要与分组 `group by` 搭配使用。
 
@@ -14,10 +14,6 @@ SELECT book_name, SUM(unit_price) FROM book GROUP BY book_name;
 # 统计每个id有多少xx
 select id, count(id) from xx group by id; 
 ```
-
-
-
-
 
 **一个笔试题，降序索引用降序查询效率高。**
 
@@ -43,3 +39,13 @@ key k1(b),key k2(c),key k3(d));
 - ❓primary  Creates clustered index，unique key Creates non-clustered index.
 
 [Difference between Primary key and Unique key - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-primary-key-and-unique-key/)
+
+## 知识点
+
+### 图片资源、文本的数据库架构
+
+图片存储路径
+
+文本使用 `TEXT` 类型存储
+
+`varchar(50)` 可以存储50个字节

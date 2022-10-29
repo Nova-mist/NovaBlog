@@ -24,8 +24,16 @@ module.exports = [
         "link": "/Tools/Git/"
       },
       {
+        "text": "接口",
+        "link": "/Tools/接口/"
+      },
+      {
         "text": "日志&json",
         "link": "/Tools/日志&json/"
+      },
+      {
+        "text": "部署",
+        "link": "/Tools/部署/"
       }
     ]
   },
@@ -33,12 +41,12 @@ module.exports = [
     "text": "web",
     "items": [
       {
-        "text": "Css",
-        "link": "/web/css/"
-      },
-      {
         "text": "Vue",
         "link": "/web/vue/"
+      },
+      {
+        "text": "基础",
+        "link": "/web/基础/"
       },
       {
         "text": "状态管理",
