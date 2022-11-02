@@ -128,3 +128,125 @@ mvn compile exec:java
 >
 > 1. 在项目B中将项目D声明为可选依赖
 > 2. 在项目A中引入项目B的时候显式排除项目D
+
+
+
+## spring-boot-starter-parent
+
+有的项目中会见到如下配置：
+
+```xml
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.2</version>
+</parent>
+ 
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+</dependencies>
+```
+
+1. 父项目的 pom 文件中定义了编码、java 版本、资源过滤、插件等配置，本项目会直接继承这些配置。
+2. 而 `spring-boot-starter-parent` 的父项目 `spring-boot-dependencies` 中又使用 `<dependencyManagement>` **指定了许多依赖的版本**，本项目再手动引入的时候就无须再指定版本。
+
+> 如果没有引入 `spring-boot-starter-parent`，需要在 `application.properties` 文件中使用 `maven` 占位符时切记要手动配置 `resource`。
+
+参考：
+
+- [spring-boot-starter-parent的作用 - 一首简单的歌 - 博客园 (cnblogs.com)](https://www.cnblogs.com/silenceshining/p/16041854.html)
+
+
+
+## dependencyManagement
+
+用来统一项目中的依赖版本，子项目也可以显式指定版本。
+
+**dependencyManagement 声明的依赖并没有被导入项目，必须在子项目再次声明才会真正导入jar包。**
+
+
+
+参考：
+
+- [mvn中dependencyManagement的使用 - 一首简单的歌 - 博客园 (cnblogs.com)](https://www.cnblogs.com/silenceshining/p/14295807.html)
+
+
+
+## 插件
+
+### maven-compiler-plugin
+
+在 `spring-boot-starter-parent` 中开启了**将方法参数名写入 class 文件**的功能。
+
+```java
+public ResultVO demo10(@PathVariable String id);
+// @PathVariable(name = "id")
+```
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+        <parameters>true</parameters>
+    </configuration>
+</plugin>
+```
+
+其他 maven 插件：
+
+```
+maven-jar-plugin
+maven-war-plugin
+maven-resources-plugin
+```
+
+
+
+在 SpringMVC 中的 pom.xml 中见过，用来编译文件，指定版本。
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+参考：
+
+- [Java编译保留方法参数名称_catoop的博客-CSDN博客](https://blog.csdn.net/catoop/article/details/102855248)
+
+### spring-boot-maven-plugin
+
+```xml
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>repackage</id>
+            <goals>
+                <goal>repackage</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <mainClass>${start-class}</mainClass>
+    </configuration>
+</plugin>
+```
+
+> `repackage` 目标默认绑定 maven 声明周期中的 `package` 阶段，这样当打包后这个插件就会进一步将所有依赖的 jar 包以及当前项目的代码打包到一个 jar 包中，从而支持 `jar -jar` 启动 Spring Boot 项目。

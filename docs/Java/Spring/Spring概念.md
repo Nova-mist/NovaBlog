@@ -467,3 +467,103 @@ Setter 注入配置中的 `name` 字段对应的是变量名，但如果在父�
 
 
 
+## Spring 应用上下文和容器
+
+> 应用上下文就是一个 IOC 容器的具体实现。
+
+[What is the difference between a Spring application context and a Spring container? - Stack Overflow](https://stackoverflow.com/questions/10303413/what-is-the-difference-between-a-spring-application-context-and-a-spring-contain)
+
+
+
+## Bean 与容器
+
+### 配置 Beans
+
+有了 ApplicationContext 就可以获取 bean 了。
+
+Spring 的核心是容器：
+
+- BeanFactory
+- ApplicationContext（本质是维护 Bean 定义和对象之间协作关系的高级接口）
+
+**不同容器的实现（配置Bean的方法）**
+
+1. AnnotationConfigApplicationContext：从一个或多个基于java的配置类中加载上下文定义，适用于java注解的方式；
+
+2. ClassPathXmlApplicationContext：从类路径下的一个或多个xml配置文件中加载上下文定义，适用于xml配置的方式；
+
+3. FileSystemXmlApplicationContext：从文件系统下的一个或多个xml配置文件中加载上下文定义，也就是说系统盘符中加载xml配置文件；
+
+4. AnnotationConfigWebApplicationContext：专门为web应用准备的，适用于注解方式；
+   ```java
+   public class MyWebApplicationInitializer implements WebApplicationInitializer {
+   
+     public void onStartup(ServletContext container) throws ServletException {
+       AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+       context.register(AccountConfig.class);
+       context.setServletContext(container);
+   
+       // servlet configuration
+     }
+   }
+   ```
+
+5. XmlWebApplicationContext：从web应用下的一个或多个xml配置文件加载上下文定义，适用于xml配置方式。
+   ```java
+   public class MyXmlWebApplicationInitializer implements WebApplicationInitializer {
+   
+     public void onStartup(ServletContext container) throws ServletException {
+       XmlWebApplicationContext context = new XmlWebApplicationContext();
+       context.setConfigLocation("/WEB-INF/spring/applicationContext.xml");
+       context.setServletContext(container);
+   
+       // Servlet configuration
+     }
+   }
+   ```
+
+> 测试 SpringMVC 时，需要在 `web.xml` 文件中配置 Spring 的 `ContextLoaderListener` servlet listener 或 SpringMVC 的 `DispatcherServlet`
+
+
+
+`xml`
+
+```xml
+<bean id = "" class = "">
+	<constructor-arg ref = "" />
+</bean>
+```
+
+`JavaConfig`
+
+```java
+@Configuration
+public class MainConfig {
+    @Bean
+    public User user() {
+        return new User();
+    }
+}
+```
+
+参考：
+
+- [Spring基础篇——Spring容器和应用上下文理解 - 陈本布衣 - 博客园 (cnblogs.com)](https://www.cnblogs.com/chenbenbuyi/p/8166304.html)
+- [The Spring ApplicationContext | Baeldung](https://www.baeldung.com/spring-application-context)
+- [java - What are the ways to get ApplicationContext object in Spring? - Stack Overflow](https://stackoverflow.com/questions/28767479/what-are-the-ways-to-get-applicationcontext-object-in-spring)
+
+
+
+### 获取应用上下文的方法
+
+1. SpringApplication 的 `run` 方法的返回值就是 ApplicationContext 实例对象
+2. 创建单例模式的自定义类 `SpringContextHolder`：
+   - 在启动类中调用 `addInitializers()` 方法，注册 ApplicationContextInitializer 接口的匿名对象。应用启动的时候会回调 `SpringContextHolder` 中的 `setApplicationContext()` 设置应用上下文。
+   - Holder 类实现 `ApplicationContextAware` 接口，利用Spring Bean的生命周期，在Bean初始化时获取应用上下文。
+   - 实现 `ApplicationListener` 接口，在SpringApplication启动时，监听`ApplicationContextEvent` 事件触发回调，获取应用上下文
+
+
+
+参考：
+
+- [Spring获取上下文的四种方式方式_~日句水+3木@的博客-CSDN博客_获取spring上下文](https://blog.csdn.net/m0_56555119/article/details/126055677)

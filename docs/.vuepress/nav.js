@@ -3,12 +3,20 @@ module.exports = [
     "text": "Java",
     "items": [
       {
+        "text": "Mybatis",
+        "link": "/Java/Mybatis/"
+      },
+      {
         "text": "Spring",
         "link": "/Java/Spring/"
       },
       {
         "text": "Spring Boot",
         "link": "/Java/SpringBoot/"
+      },
+      {
+        "text": "Spring MVC",
+        "link": "/Java/SpringMVC/"
       },
       {
         "text": "基础",
