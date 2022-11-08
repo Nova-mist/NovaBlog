@@ -20,8 +20,6 @@
 >
 > 使用Rollup打包代码。
 
-
-
 ## 搭建Vite项目
 
 ```powershell
@@ -49,8 +47,6 @@ npm create vite@latest my-vue-app -- --template vue
 </body>
 ```
 
-
-
 ## 工具 & 依赖
 
 VSCode 插件：
@@ -68,9 +64,9 @@ VSCode 插件：
 > 3. 安装 VSCode 插件会自动读取配置文件
 > 4. `vite-plugin-eslint` 库可以将错误显示在浏览器中
 
-
-
 ❤️**使用步骤**
+
+补充：[Vite 安装 Tailwindcss](https://tailwindcss.com/docs/guides/vite#vue)
 
 ```bash
 npm init vite@latest
@@ -124,16 +120,6 @@ module.exports = {
 },
 ```
 
-
-
-
-
-
-
-
-
-
-
 **使用命令行**
 
 ```powershell
@@ -142,8 +128,6 @@ npx vite --help
 npx vite # start dev server
 npx vite build
 ```
-
-
 
 ## 功能
 
@@ -199,10 +183,6 @@ export {b, c}
 import {a, b, c} from 'xxx.js'
 ```
 
-
-
-
-
 ## 使用插件
 
 1. 将插件添加到项目的 `devDependencies`
@@ -228,19 +208,19 @@ export default defineConfig({
 })
 ```
 
-
-
 ## 静态资源处理
 
 1. 服务时引入一个静态资源会返回解析后的公共路径
 
 2. 未被包含在内部列表或 `assetsInclude` 中的资源，可以使用 `?url` 后缀显式导入为一个 URL。
+
    ```js
    import workletURL from 'extra-scalloped-border/worklet.js?url'
    CSS.paintWorklet.addModule(workletURL)
    ```
 
 3. 资源可以使用 `?raw` 后缀声明作为字符串引入。
+
    ```js
    import shaderString from './shader.glsl?raw'
    ```
@@ -252,12 +232,27 @@ export default defineConfig({
 
 该目录中的资源在开发时能直接通过 `/` 根路径访问到，并且打包时会被完整复制到目标目录的根目录下。
 
-
-
 ## 对于路径使用@简写
 
-[javascript - Vite: resolve.alias - how to resolve paths? - Stack Overflow](https://stackoverflow.com/questions/68217795/vite-resolve-alias-how-to-resolve-paths)
+`/src/views/xxx`  和相对路径 `../views/xxx` 可以映射为 `@/views/xxx`
 
-`/src/views/xxx`  和相对路径 `../views/xxx ` 可以映射为 `@/views/xxx`
+```js
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-🟠但是在 vite 项目中，如果路径写错项目不会明显的报错，需要查看浏览器调试界面才会看到请求地址错误。
+// No longer support commonJS import, use ES6 import. https://juejin.cn/post/7142338375402881060
+import path from "path";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  resolve: {
+    // @ -> /src
+    // https://vueschool.io/articles/vuejs-tutorials/import-aliases-in-vite/
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  plugins: [vue()],
+});
+
+```

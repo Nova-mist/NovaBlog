@@ -450,9 +450,13 @@ Setter 注入配置中的 `name` 字段对应的是变量名，但如果在父�
 
 ##  XML 配置注解扫描
 
- `context:annotation-config`  ：开启注解，可以使用 `@Autowired`，但还要在 xml 中注册 bean。
+ `context:annotation-config`  ：开启 `@Autowired` 等注解。
 
-`context:component-scan` ：**在上面的基础上**，可以自动扫描 `@Component` / `@Controller`
+`context:component-scan` ：可以自动扫描 `@Component` / `@Controller` 等注解。
+
+参考：https://www.cnblogs.com/zhangsonglin/p/11181064.html
+
+
 
 **多个扫描路径**
 
@@ -567,3 +571,36 @@ public class MainConfig {
 参考：
 
 - [Spring获取上下文的四种方式方式_~日句水+3木@的博客-CSDN博客_获取spring上下文](https://blog.csdn.net/m0_56555119/article/details/126055677)
+
+
+
+## Spring 配置文件
+
+`xml-dtd` 是一种规范化的 xml 文件。
+
+> DTD stands for Document Type Definition.
+>
+> A DTD defines the structure and the legal elements and attributes of an XML document.
+
+Spring 现在使用 *Schema-based* 的 xml 配置文件。
+
+下面是最基本的模板。
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+</beans>
+```
+
+使用 *aop*、*tx*（事务）等特性时的头文件**模板**都可以在 [官方文档](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html) 找到。
+
+参考：
+
+- [XML DTD (w3schools.com)](https://www.w3schools.com/xml/xml_dtd.asp)
+- [40. XML Schema-based configuration (spring.io)](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html)
