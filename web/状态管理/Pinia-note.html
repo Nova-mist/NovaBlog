@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>🍍Pinia | Nova Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="我那摊大饼一样的零散学习笔记">
+    
+    <link rel="preload" href="/NovaBlog/assets/css/0.styles.26d8bde2.css" as="style"><link rel="preload" href="/NovaBlog/assets/js/app.7283b6f5.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/2.6539ea43.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/49.ea737da6.js" as="script"><link rel="prefetch" href="/NovaBlog/assets/js/10.681f19e7.js"><link rel="prefetch" href="/NovaBlog/assets/js/11.adb3fca2.js"><link rel="prefetch" href="/NovaBlog/assets/js/12.e509a0f8.js"><link rel="prefetch" href="/NovaBlog/assets/js/13.0ace9699.js"><link rel="prefetch" href="/NovaBlog/assets/js/14.f11331b6.js"><link rel="prefetch" href="/NovaBlog/assets/js/15.c3fe2b37.js"><link rel="prefetch" href="/NovaBlog/assets/js/16.76473f3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/17.1e6e96a7.js"><link rel="prefetch" href="/NovaBlog/assets/js/18.de0f476b.js"><link rel="prefetch" href="/NovaBlog/assets/js/19.464c0b71.js"><link rel="prefetch" href="/NovaBlog/assets/js/20.adc0ad6e.js"><link rel="prefetch" href="/NovaBlog/assets/js/21.a75102d0.js"><link rel="prefetch" href="/NovaBlog/assets/js/22.409ca266.js"><link rel="prefetch" href="/NovaBlog/assets/js/23.4b83f159.js"><link rel="prefetch" href="/NovaBlog/assets/js/24.b80958e2.js"><link rel="prefetch" href="/NovaBlog/assets/js/25.bbdd2bef.js"><link rel="prefetch" href="/NovaBlog/assets/js/26.0ed31014.js"><link rel="prefetch" href="/NovaBlog/assets/js/27.80bd39a6.js"><link rel="prefetch" href="/NovaBlog/assets/js/28.2772d3d5.js"><link rel="prefetch" href="/NovaBlog/assets/js/29.d14c59ce.js"><link rel="prefetch" href="/NovaBlog/assets/js/3.672c28f4.js"><link rel="prefetch" href="/NovaBlog/assets/js/30.3edde461.js"><link rel="prefetch" href="/NovaBlog/assets/js/31.da8777c1.js"><link rel="prefetch" href="/NovaBlog/assets/js/32.fa19d459.js"><link rel="prefetch" href="/NovaBlog/assets/js/33.2d3adc2b.js"><link rel="prefetch" href="/NovaBlog/assets/js/34.35850d01.js"><link rel="prefetch" href="/NovaBlog/assets/js/35.b14e62bb.js"><link rel="prefetch" href="/NovaBlog/assets/js/36.44753080.js"><link rel="prefetch" href="/NovaBlog/assets/js/37.8d2088d4.js"><link rel="prefetch" href="/NovaBlog/assets/js/38.4366f780.js"><link rel="prefetch" href="/NovaBlog/assets/js/39.c9f5137d.js"><link rel="prefetch" href="/NovaBlog/assets/js/4.854c56f8.js"><link rel="prefetch" href="/NovaBlog/assets/js/40.68c696f4.js"><link rel="prefetch" href="/NovaBlog/assets/js/41.7190c7b3.js"><link rel="prefetch" href="/NovaBlog/assets/js/42.7710aff4.js"><link rel="prefetch" href="/NovaBlog/assets/js/43.9f513289.js"><link rel="prefetch" href="/NovaBlog/assets/js/44.493f11ea.js"><link rel="prefetch" href="/NovaBlog/assets/js/45.66cd96d8.js"><link rel="prefetch" href="/NovaBlog/assets/js/46.f5e4e401.js"><link rel="prefetch" href="/NovaBlog/assets/js/47.c2f3caf8.js"><link rel="prefetch" href="/NovaBlog/assets/js/48.74afa3cf.js"><link rel="prefetch" href="/NovaBlog/assets/js/5.f7ccee55.js"><link rel="prefetch" href="/NovaBlog/assets/js/50.3eca0141.js"><link rel="prefetch" href="/NovaBlog/assets/js/51.949ffca7.js"><link rel="prefetch" href="/NovaBlog/assets/js/52.d007ce86.js"><link rel="prefetch" href="/NovaBlog/assets/js/53.252a0d24.js"><link rel="prefetch" href="/NovaBlog/assets/js/54.97c86c53.js"><link rel="prefetch" href="/NovaBlog/assets/js/55.4577ea3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/56.085a6c0d.js"><link rel="prefetch" href="/NovaBlog/assets/js/57.6804712d.js"><link rel="prefetch" href="/NovaBlog/assets/js/58.559b3cac.js"><link rel="prefetch" href="/NovaBlog/assets/js/59.48650730.js"><link rel="prefetch" href="/NovaBlog/assets/js/6.14027d31.js"><link rel="prefetch" href="/NovaBlog/assets/js/60.e53abbd4.js"><link rel="prefetch" href="/NovaBlog/assets/js/61.53d32451.js"><link rel="prefetch" href="/NovaBlog/assets/js/62.f93973c5.js"><link rel="prefetch" href="/NovaBlog/assets/js/63.9dd5b9b3.js"><link rel="prefetch" href="/NovaBlog/assets/js/64.4a1ac6da.js"><link rel="prefetch" href="/NovaBlog/assets/js/65.84f958d2.js"><link rel="prefetch" href="/NovaBlog/assets/js/66.38972cd8.js"><link rel="prefetch" href="/NovaBlog/assets/js/67.97df1d7d.js"><link rel="prefetch" href="/NovaBlog/assets/js/68.f78ccdc1.js"><link rel="prefetch" href="/NovaBlog/assets/js/69.9d476a9c.js"><link rel="prefetch" href="/NovaBlog/assets/js/7.5c5bd089.js"><link rel="prefetch" href="/NovaBlog/assets/js/70.28382d01.js"><link rel="prefetch" href="/NovaBlog/assets/js/71.4a4fdf3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/72.646ad1ce.js"><link rel="prefetch" href="/NovaBlog/assets/js/73.2f2ebeb1.js"><link rel="prefetch" href="/NovaBlog/assets/js/74.22b83718.js"><link rel="prefetch" href="/NovaBlog/assets/js/75.50e2585a.js"><link rel="prefetch" href="/NovaBlog/assets/js/76.998e5fbe.js"><link rel="prefetch" href="/NovaBlog/assets/js/77.e805e4a0.js"><link rel="prefetch" href="/NovaBlog/assets/js/8.f20fe421.js"><link rel="prefetch" href="/NovaBlog/assets/js/9.749c610b.js">
+    <link rel="stylesheet" href="/NovaBlog/assets/css/0.styles.26d8bde2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/NovaBlog/" class="home-link router-link-active"><!----> <span class="site-name">Nova Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringBoot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringMVC/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/基础/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/接口/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/日志&amp;json/" class="nav-link">
+  日志&amp;json
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/部署/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web" class="dropdown-title"><span class="title">web</span> <span class="arrow down"></span></button> <button type="button" aria-label="web" class="mobile-dropdown-title"><span class="title">web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/基础/" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/状态管理/" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/组件库/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/路由/" class="nav-link">
+  路由
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/中间件/ELK/" class="nav-link">
+  ELK
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/其他/" class="nav-link">
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/动规/" class="nav-link">
+  动规
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/贪心/" class="nav-link">
+  贪心
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/链表二叉树/" class="nav-link">
+  链表二叉树
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringBoot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringMVC/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/基础/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/接口/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/日志&amp;json/" class="nav-link">
+  日志&amp;json
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/部署/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web" class="dropdown-title"><span class="title">web</span> <span class="arrow down"></span></button> <button type="button" aria-label="web" class="mobile-dropdown-title"><span class="title">web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/基础/" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/状态管理/" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/组件库/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/路由/" class="nav-link">
+  路由
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/中间件/ELK/" class="nav-link">
+  ELK
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/其他/" class="nav-link">
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/动规/" class="nav-link">
+  动规
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/贪心/" class="nav-link">
+  贪心
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/链表二叉树/" class="nav-link">
+  链表二叉树
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>状态管理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/NovaBlog/web/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" aria-current="page" class="sidebar-link">Vue 相关</a></li><li><a href="/NovaBlog/web/状态管理/Pinia-note.html" class="active sidebar-link">🍍Pinia</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#状态管理的概念" class="sidebar-link">状态管理的概念</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#🍍pinia-2" class="sidebar-link">🍍Pinia</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#install" class="sidebar-link">Install</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#define-a-store" class="sidebar-link">Define a Store</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#using-the-store" class="sidebar-link">Using the store</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#state" class="sidebar-link">State</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#getter" class="sidebar-link">Getter</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/web/状态管理/Pinia-note.html#action" class="sidebar-link">Action</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="🍍pinia"><a href="#🍍pinia" class="header-anchor">#</a> 🍍Pinia</h1> <h2 id="状态管理的概念"><a href="#状态管理的概念" class="header-anchor">#</a> 状态管理的概念</h2> <ul><li><a href="https://pinia.vuejs.org/" target="_blank" rel="noopener noreferrer">Pinia 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <blockquote><p>特别是使用路由的时候，切换页面后组件就会 unmount 导致数据丢失，但如果数据都统一保存在一个 store 中，每个组件都通过 store 来使用数据，就解决了数据共享和持久化的问题。</p> <p>通过 store 中的 Getter 读取数据，Action 修改数据。</p></blockquote> <p>全局状态管理的本质是<strong>组件之间的数据持久化</strong>。</p> <p>以单页面应用中的 Counter 举例（点击按钮就会加1）：</p> <ul><li>在初始模板中，切换页面后 counter 就会归零。</li> <li>使用全局状态管理，页面的切换不会影响 counter。<strong>但刷新页面还是会归零</strong></li></ul> <p>A Vue component instance holds its own reactive state just like <em>a simple counter component</em>.</p> <p>🟢Parts of a self- contained unit:</p> <ul><li>The <strong>state</strong>, the source of truth that drives our app;</li> <li>The <strong>view</strong>, a declarative mapping of the <strong>state</strong>;</li> <li>The <strong>actions</strong>, the possible ways the state could change in reaction to user inputs from the <strong>view</strong>.</li></ul> <p>🟡Solutions for <strong>multiple components that share a common state</strong> :</p> <ul><li>extract the shared state out of the components</li> <li>manage components in a global singleton</li></ul> <p>全局状态管理的核心思路：数据和方法都存放于 <code>CountStore.js</code> ，其他组件通过引入来访问。</p> <hr> <p><strong>Simple State Management with Reactivity API</strong></p> <blockquote><p>在简单的项目中自己实现状态管理</p> <p>其他组件或直接 <code>store.js</code> 中的变量，或调用方法间接的增减变量，不可以在组件中修改变量。</p> <p>如果使用 Pinia 会自动双向绑定</p></blockquote> <p>Use <code>reactive()</code> to create a reactive object, and then import it from multiple components.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// store.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> reactive <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- ComponentA.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./store.js'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      store
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>store.increment()<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    From A: {{ store.count }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- ComponentB.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./store.js'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      store
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>store.increment()<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    From B: {{ store.count }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>🟠<strong>Use state management library</strong></p> <blockquote><ul><li>Vuex3 for Vue2.x</li> <li>Vuex4 for Vue3.x</li> <li><strong>Pinia (Vuex5) for Vue2.x &amp; Vue3.x</strong></li></ul></blockquote> <p>Check the doc <a href="https://pinia.vuejs.org/introduction.html" target="_blank" rel="noopener noreferrer">Introduction | Pinia (vuejs.org)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="🍍pinia-2"><a href="#🍍pinia-2" class="header-anchor">#</a> 🍍Pinia</h2> <h3 id="install"><a href="#install" class="header-anchor">#</a> Install</h3> <p>🟠Notes only for Vue3 + Vite.</p> <p><strong>Install:</strong></p> <div class="language-powershell extra-class"><pre class="language-powershell"><code>npm install pinia
+</code></pre></div><p><strong>Usage:</strong></p> <p>Create a pinia instance and pass it to the app as a plugin.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createPinia <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+<span class="token keyword">const</span> pinia <span class="token operator">=</span> <span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>pinia<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span>
+</code></pre></div><blockquote><p>A Store hosts global state.</p> <p>Store has three concepts, the <code>state</code> , <code>getters</code> and <code>actions</code> and these concepts are the quivalent of <code>data</code> , <code>computed</code>, and <code>methods</code> in components.</p></blockquote> <p><strong>There is no need for local state to be stored in the Pinia Store.</strong></p> <table><thead><tr><th>Store</th> <th>Component</th> <th></th></tr></thead> <tbody><tr><td>state</td> <td>data</td> <td>数据</td></tr> <tr><td>getters</td> <td>computed</td> <td>计算属性</td></tr> <tr><td>actions</td> <td>methods</td> <td>方法</td></tr></tbody></table> <h3 id="define-a-store"><a href="#define-a-store" class="header-anchor">#</a> Define a Store</h3> <p>🟠有两种写法</p> <ul><li><p>【推荐】Setup Stores 对应着 vue 的组合 API
+使用 <code>ref()</code> / <code>computed()</code> /  <code>function()</code> 然后在末尾 return</p></li> <li><p>Option Stores 对应着 vue 的选项 API</p></li></ul> <p><a href="https://pinia.vuejs.org/core-concepts/#setup-stores" target="_blank" rel="noopener noreferrer">Defining a Store | Pinia (vuejs.org)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>官方文档主要是选项式写法，并且在组件中使用的时候主要还是 使用 <code>setup()</code> ，但我推荐写成 <code>&lt;script setup&gt;</code> 中的组合式写法。</p> <p><strong>下面的基本都是选项式的笔记。</strong></p> <p>Global Store:</p> <ul><li>ProductStore.js</li> <li>UserStore.js</li> <li>...</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// couter.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token comment">// useStore could be anything like useUser, useCart</span>
+<span class="token comment">// the first argument is a unique id of the store across your application</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+           <span class="token comment">// all these properties will have their type inferred automatically</span>
+         <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+         <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'kikukaji'</span><span class="token punctuation">,</span>
+         <span class="token literal-property property">isAdmin</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">}</span>   
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="using-the-store"><a href="#using-the-store" class="header-anchor">#</a> Using the store</h3> <p><strong>使用整个 store 实例</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores/counter'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            <span class="token comment">// you can return the whole store instance to use it in the template</span>
+        store<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>通过解构使用部分属性和方法</strong></p> <ul><li>use <code>storeToRefs()</code> to extract properties from the store while keeping its reactivity.</li> <li>Actions can be destructured directly from the store as they are bound to the store.</li> <li>静态属性直接通过实例访问，<code>store.xx</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> storeToRefs <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">// `name` and `counter` are reactive refs</span>
+        <span class="token comment">// This will also create refs for properties added by plugins</span>
+        <span class="token comment">// but skip any action or non reactive (non ref/reactive) property</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> counter <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">storeToRefs</span><span class="token punctuation">(</span>store<span class="token punctuation">)</span>
+        <span class="token comment">// the increment action can be just extracted</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> increment <span class="token punctuation">}</span> <span class="token operator">=</span> store
+
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          name<span class="token punctuation">,</span>
+          doubleCount<span class="token punctuation">,</span>
+          increment<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="state"><a href="#state" class="header-anchor">#</a> State</h3> <blockquote><p>In Pinia the state is defined as a function that returns the initial state. This allows Pinia to work in both Server and Client Side.</p></blockquote> <p><strong>Accessing the state</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span>counter<span class="token operator">++</span>
+</code></pre></div><p><strong>Resetting the state</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">$reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><hr> <p>🟡 可以看到在使用存储实例的时候，主体结构是 Composition API 的形式，关键看那个 <code>setup()</code>，区别于传统的 <code>data()</code> 、<code>computed</code> 、 <code>methods</code> 的结构。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores/counter'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        store<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>此时可以使用 <code>mapState()</code> 、<code>mapWritableState()</code> 等方法来将状态属性（state）映射为计算属性（computed）。</p> <p>具体可以查看文档 <a href="https://pinia.vuejs.org/core-concepts/state.html#usage-with-the-options-api" target="_blank" rel="noopener noreferrer">State | Pinia (vuejs.org)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>修改整个状态</strong></p> <p>Apply multiple changes at the same time.</p> <div class="language-js extra-class"><pre class="language-js"><code>store<span class="token punctuation">.</span><span class="token function">$patch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">counter</span><span class="token operator">:</span> store<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">120</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'DIO'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>Handle with complex behavior of array.</p> <div class="language-js extra-class"><pre class="language-js"><code>cartStore<span class="token punctuation">.</span><span class="token function">$patch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'shoes'</span><span class="token punctuation">,</span> <span class="token literal-property property">quantity</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  state<span class="token punctuation">.</span>hasChanged <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="getter"><a href="#getter" class="header-anchor">#</a> Getter</h3> <p><strong>声明 Getter</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span>defineStore<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useCartStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'CartStore'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">items</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span>length
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// arrow function</span>
+        <span class="token comment">// count: (state) =&gt; state.items.length </span>
+        
+        <span class="token comment">// can use getter in getter</span>
+        <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">===</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// arrow function</span>
+        <span class="token comment">// isEmpty: (state) =&gt; state.count === 0</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>🟢<strong>Encourage to use arrow function.</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">doubleCount</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>通过实例直接使用 Setter</strong></p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Double count is {{ store.doubleCount }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            
+            <span class="token keyword">return</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>🟢<strong>Use <code>this</code> to access other getters.</strong></p> <p><strong>向 Getter 传递参数</strong></p> <blockquote><p>🟠<em>Getters</em> are just <em>computed</em> properties behind the scenes, so it's not possible to pass any parameters to them. However, you can return a function from the <em>getter</em> to accept any arguments</p> <p>不能直接向 Getter 方法直接传递参数，但可以传递一个方法。</p></blockquote> <p><a href="https://pinia.vuejs.org/core-concepts/getters.html#passing-arguments-to-getters" target="_blank" rel="noopener noreferrer">Getters | Pinia (vuejs.org)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">getUserById</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">userId</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> user<span class="token punctuation">.</span>id <span class="token operator">===</span> userId <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>访问其他 Store 的 Getter</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useOtherStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./other-store'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">localData</span><span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">otherGetter</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> otherStore <span class="token operator">=</span> <span class="token function">useOtherStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> state<span class="token punctuation">.</span>localData <span class="token operator">+</span> otherStore<span class="token punctuation">.</span>data
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>🟢<strong>Encourage to <code>setup()</code> instead of Composition API such as map helper <code>mapState()</code>.</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// counterStore.js</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pinia'</span><span class="token punctuation">,</span>
+
+<span class="token keyword">const</span> useCounterStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'counterStore'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">getters</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">doubleCounter</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>counter <span class="token operator">*</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// app.vue</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useCounterStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/stores/counterStore'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> counterStore <span class="token operator">=</span> <span class="token function">useCounterStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">return</span> <span class="token punctuation">{</span> counterStore <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">computed</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">quadrupleCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>counterStore<span class="token punctuation">.</span>doubleCounter <span class="token operator">*</span> <span class="token number">2</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="action"><a href="#action" class="header-anchor">#</a> Action</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> useStore <span class="token operator">=</span> <span class="token function">defineStore</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">actions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>counter<span class="token operator">++</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">randomizeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>counter <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>Action 使用起来就相当于 Method</strong></p> <p>🟠但区别于方法，没有 <code>function</code> 关键字。</p> <p>可以传递参数的，如果报错 <code>xxx is not a function</code> 就检查 store 是否引用对了。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token function">useMainStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// call the action as a method of the store</span>
+    main<span class="token punctuation">.</span><span class="token function">randomizeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>💥 <strong><code>actions</code> can be asynchronous</strong>, you can <code>await</code> inside of actions any API call or even other actions!</p> <ul><li>async</li> <li>await</li></ul> <p>异步是非常重要的，特别是请求后端的接口的时候。</p> <p>如果组件在 <code>onMounted</code> 块中使用 store 的 action 来请求数据，并且在 <code>computed</code> 块中使用 Getter 来获取数据，那么就一定要使用<strong>异步</strong>，否则数据不会更新。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token literal-property property">actions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">getTag</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pid <span class="token operator">=</span> id<span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:8080/getPostTag&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                <span class="token literal-property property">id</span><span class="token operator">:</span> id<span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// console.log(data.data);</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>postTagList <span class="token operator">=</span> data<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p><strong>Usage with the Options API</strong></p> <p>如果不使用 Composition API 比如 <code>setup()</code> , 就要使用 <code>mapActions()</code> 来将 Action 属性映射为组件的方法。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/8/2022, 2:56:58 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/NovaBlog/web/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" class="prev router-link-active">
+        Vue 相关
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/NovaBlog/assets/js/app.7283b6f5.js" defer></script><script src="/NovaBlog/assets/js/2.6539ea43.js" defer></script><script src="/NovaBlog/assets/js/49.ea737da6.js" defer></script>
+  </body>
+</html>

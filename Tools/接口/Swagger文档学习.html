@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Swagger 文档学习 | Nova Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="我那摊大饼一样的零散学习笔记">
+    
+    <link rel="preload" href="/NovaBlog/assets/css/0.styles.26d8bde2.css" as="style"><link rel="preload" href="/NovaBlog/assets/js/app.7283b6f5.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/2.6539ea43.js" as="script"><link rel="preload" href="/NovaBlog/assets/js/35.b14e62bb.js" as="script"><link rel="prefetch" href="/NovaBlog/assets/js/10.681f19e7.js"><link rel="prefetch" href="/NovaBlog/assets/js/11.adb3fca2.js"><link rel="prefetch" href="/NovaBlog/assets/js/12.e509a0f8.js"><link rel="prefetch" href="/NovaBlog/assets/js/13.0ace9699.js"><link rel="prefetch" href="/NovaBlog/assets/js/14.f11331b6.js"><link rel="prefetch" href="/NovaBlog/assets/js/15.c3fe2b37.js"><link rel="prefetch" href="/NovaBlog/assets/js/16.76473f3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/17.1e6e96a7.js"><link rel="prefetch" href="/NovaBlog/assets/js/18.de0f476b.js"><link rel="prefetch" href="/NovaBlog/assets/js/19.464c0b71.js"><link rel="prefetch" href="/NovaBlog/assets/js/20.adc0ad6e.js"><link rel="prefetch" href="/NovaBlog/assets/js/21.a75102d0.js"><link rel="prefetch" href="/NovaBlog/assets/js/22.409ca266.js"><link rel="prefetch" href="/NovaBlog/assets/js/23.4b83f159.js"><link rel="prefetch" href="/NovaBlog/assets/js/24.b80958e2.js"><link rel="prefetch" href="/NovaBlog/assets/js/25.bbdd2bef.js"><link rel="prefetch" href="/NovaBlog/assets/js/26.0ed31014.js"><link rel="prefetch" href="/NovaBlog/assets/js/27.80bd39a6.js"><link rel="prefetch" href="/NovaBlog/assets/js/28.2772d3d5.js"><link rel="prefetch" href="/NovaBlog/assets/js/29.d14c59ce.js"><link rel="prefetch" href="/NovaBlog/assets/js/3.672c28f4.js"><link rel="prefetch" href="/NovaBlog/assets/js/30.3edde461.js"><link rel="prefetch" href="/NovaBlog/assets/js/31.da8777c1.js"><link rel="prefetch" href="/NovaBlog/assets/js/32.fa19d459.js"><link rel="prefetch" href="/NovaBlog/assets/js/33.2d3adc2b.js"><link rel="prefetch" href="/NovaBlog/assets/js/34.35850d01.js"><link rel="prefetch" href="/NovaBlog/assets/js/36.44753080.js"><link rel="prefetch" href="/NovaBlog/assets/js/37.8d2088d4.js"><link rel="prefetch" href="/NovaBlog/assets/js/38.4366f780.js"><link rel="prefetch" href="/NovaBlog/assets/js/39.c9f5137d.js"><link rel="prefetch" href="/NovaBlog/assets/js/4.854c56f8.js"><link rel="prefetch" href="/NovaBlog/assets/js/40.68c696f4.js"><link rel="prefetch" href="/NovaBlog/assets/js/41.7190c7b3.js"><link rel="prefetch" href="/NovaBlog/assets/js/42.7710aff4.js"><link rel="prefetch" href="/NovaBlog/assets/js/43.9f513289.js"><link rel="prefetch" href="/NovaBlog/assets/js/44.493f11ea.js"><link rel="prefetch" href="/NovaBlog/assets/js/45.66cd96d8.js"><link rel="prefetch" href="/NovaBlog/assets/js/46.f5e4e401.js"><link rel="prefetch" href="/NovaBlog/assets/js/47.c2f3caf8.js"><link rel="prefetch" href="/NovaBlog/assets/js/48.74afa3cf.js"><link rel="prefetch" href="/NovaBlog/assets/js/49.ea737da6.js"><link rel="prefetch" href="/NovaBlog/assets/js/5.f7ccee55.js"><link rel="prefetch" href="/NovaBlog/assets/js/50.3eca0141.js"><link rel="prefetch" href="/NovaBlog/assets/js/51.949ffca7.js"><link rel="prefetch" href="/NovaBlog/assets/js/52.d007ce86.js"><link rel="prefetch" href="/NovaBlog/assets/js/53.252a0d24.js"><link rel="prefetch" href="/NovaBlog/assets/js/54.97c86c53.js"><link rel="prefetch" href="/NovaBlog/assets/js/55.4577ea3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/56.085a6c0d.js"><link rel="prefetch" href="/NovaBlog/assets/js/57.6804712d.js"><link rel="prefetch" href="/NovaBlog/assets/js/58.559b3cac.js"><link rel="prefetch" href="/NovaBlog/assets/js/59.48650730.js"><link rel="prefetch" href="/NovaBlog/assets/js/6.14027d31.js"><link rel="prefetch" href="/NovaBlog/assets/js/60.e53abbd4.js"><link rel="prefetch" href="/NovaBlog/assets/js/61.53d32451.js"><link rel="prefetch" href="/NovaBlog/assets/js/62.f93973c5.js"><link rel="prefetch" href="/NovaBlog/assets/js/63.9dd5b9b3.js"><link rel="prefetch" href="/NovaBlog/assets/js/64.4a1ac6da.js"><link rel="prefetch" href="/NovaBlog/assets/js/65.84f958d2.js"><link rel="prefetch" href="/NovaBlog/assets/js/66.38972cd8.js"><link rel="prefetch" href="/NovaBlog/assets/js/67.97df1d7d.js"><link rel="prefetch" href="/NovaBlog/assets/js/68.f78ccdc1.js"><link rel="prefetch" href="/NovaBlog/assets/js/69.9d476a9c.js"><link rel="prefetch" href="/NovaBlog/assets/js/7.5c5bd089.js"><link rel="prefetch" href="/NovaBlog/assets/js/70.28382d01.js"><link rel="prefetch" href="/NovaBlog/assets/js/71.4a4fdf3a.js"><link rel="prefetch" href="/NovaBlog/assets/js/72.646ad1ce.js"><link rel="prefetch" href="/NovaBlog/assets/js/73.2f2ebeb1.js"><link rel="prefetch" href="/NovaBlog/assets/js/74.22b83718.js"><link rel="prefetch" href="/NovaBlog/assets/js/75.50e2585a.js"><link rel="prefetch" href="/NovaBlog/assets/js/76.998e5fbe.js"><link rel="prefetch" href="/NovaBlog/assets/js/77.e805e4a0.js"><link rel="prefetch" href="/NovaBlog/assets/js/8.f20fe421.js"><link rel="prefetch" href="/NovaBlog/assets/js/9.749c610b.js">
+    <link rel="stylesheet" href="/NovaBlog/assets/css/0.styles.26d8bde2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/NovaBlog/" class="home-link router-link-active"><!----> <span class="site-name">Nova Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringBoot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringMVC/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/基础/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/接口/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/日志&amp;json/" class="nav-link">
+  日志&amp;json
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/部署/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web" class="dropdown-title"><span class="title">web</span> <span class="arrow down"></span></button> <button type="button" aria-label="web" class="mobile-dropdown-title"><span class="title">web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/基础/" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/状态管理/" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/组件库/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/路由/" class="nav-link">
+  路由
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/中间件/ELK/" class="nav-link">
+  ELK
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/其他/" class="nav-link">
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/动规/" class="nav-link">
+  动规
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/贪心/" class="nav-link">
+  贪心
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/链表二叉树/" class="nav-link">
+  链表二叉树
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/NovaBlog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringBoot/" class="nav-link">
+  Spring Boot
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/SpringMVC/" class="nav-link">
+  Spring MVC
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Java/基础/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Tools" class="dropdown-title"><span class="title">Tools</span> <span class="arrow down"></span></button> <button type="button" aria-label="Tools" class="mobile-dropdown-title"><span class="title">Tools</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/接口/" class="nav-link">
+  接口
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/日志&amp;json/" class="nav-link">
+  日志&amp;json
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/Tools/部署/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="web" class="dropdown-title"><span class="title">web</span> <span class="arrow down"></span></button> <button type="button" aria-label="web" class="mobile-dropdown-title"><span class="title">web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/基础/" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/状态管理/" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/组件库/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/web/路由/" class="nav-link">
+  路由
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中间件" class="dropdown-title"><span class="title">中间件</span> <span class="arrow down"></span></button> <button type="button" aria-label="中间件" class="mobile-dropdown-title"><span class="title">中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/中间件/ELK/" class="nav-link">
+  ELK
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/MySQL/" class="nav-link">
+  My SQL
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/数据库/Redis/" class="nav-link">
+  Redis
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/其他/" class="nav-link">
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/动规/" class="nav-link">
+  动规
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/贪心/" class="nav-link">
+  贪心
+</a></li><li class="dropdown-item"><!----> <a href="/NovaBlog/算法/链表二叉树/" class="nav-link">
+  链表二叉树
+</a></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>接口</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/NovaBlog/Tools/%E6%8E%A5%E5%8F%A3/" aria-current="page" class="sidebar-link">导航</a></li><li><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html" class="sidebar-link">Spring 整合 swagger</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#前概" class="sidebar-link">前概</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#【旧】springboot-集成-swagger" class="sidebar-link">【旧】SpringBoot 集成 Swagger</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#配置扫描接口" class="sidebar-link">配置扫描接口</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#配置启用条件" class="sidebar-link">配置启用条件</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#配置-api-分组" class="sidebar-link">配置 api 分组</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#添加注释" class="sidebar-link">添加注释</a></li></ul></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#【新】🟢spring-整合-swagger" class="sidebar-link">【新】🟢Spring 整合 swagger</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#springboot" class="sidebar-link">SpringBoot</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Spring整合Swagger.html#springmvc" class="sidebar-link">SpringMVC</a></li></ul></li></ul></li><li><a href="/NovaBlog/Tools/接口/Swagger文档学习.html" class="active sidebar-link">Swagger 文档学习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#openapi-oas3" class="sidebar-link">OpenAPI（OAS3）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#api-server-and-base-path" class="sidebar-link">API Server and Base Path</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#media-types" class="sidebar-link">Media Types</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#paths-and-operations" class="sidebar-link">Paths and Operations</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#describing-parameters" class="sidebar-link">Describing Parameters</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#parameter-serialization" class="sidebar-link">Parameter Serialization</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#request-body" class="sidebar-link">Request Body</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#responses" class="sidebar-link">Responses</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#data-types" class="sidebar-link">Data Types</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#adding-examples" class="sidebar-link">Adding Examples</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#tags" class="sidebar-link">Tags</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#认证授权" class="sidebar-link">认证授权</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#标准结构" class="sidebar-link">标准结构</a></li></ul></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#swagger-tools" class="sidebar-link">Swagger Tools</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#swagger-editor" class="sidebar-link">Swagger Editor</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#swagger-ui" class="sidebar-link">Swagger UI</a></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#swagger-codegen" class="sidebar-link">Swagger Codegen</a></li></ul></li><li class="sidebar-sub-header"><a href="/NovaBlog/Tools/接口/Swagger文档学习.html#相关文章" class="sidebar-link">相关文章</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="swagger-文档学习"><a href="#swagger-文档学习" class="header-anchor">#</a> Swagger 文档学习</h1> <p><a href="https://swagger.io/" target="_blank" rel="noopener noreferrer">Swagger 官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>OpenAPI Specification 是 RESTful APIs 的标准。</p> <p>搭配 Swagger Tools 使用。</p> <p>设计接口、生成代码模板、接口文档化、自动测试。</p></blockquote> <h2 id="openapi-oas3"><a href="#openapi-oas3" class="header-anchor">#</a> OpenAPI（OAS3）</h2> <p><a href="https://swagger.io/docs/specification/about/" target="_blank" rel="noopener noreferrer">About Swagger Specification | Documentation | Swagger<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>API specifications can be written in YAML or JSON.</p></blockquote> <p>Swagger 是基于 OpenAPI Specification 的一系列工具，可以用来设计、构建、文档化 REST APIs.</p> <ul><li>Swagger Editor 在浏览器上就可以写接口规范</li> <li>Swagger UI 生成接口文档、进行测试</li> <li>Swagger Codegen 生成代码模板</li></ul> <p><strong>整体结构</strong> <a href="https://swagger.io/docs/specification/basic-structure/" target="_blank" rel="noopener noreferrer">Basic Structure (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>YAML 的格式。</p> <hr> <h3 id="api-server-and-base-path"><a href="#api-server-and-base-path" class="header-anchor">#</a> API Server and Base Path</h3> <p><strong>API Server</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">servers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//api.example.com/v1  
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> Production server
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> /v1 <span class="token comment"># 如果是相对路径会使用 OpenAPI定义文件的服务器地址</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> / <span class="token comment"># 没有地址的写法</span>
+</code></pre></div><blockquote><p>if the definition hosted at <code>http://localhost:3001/openapi.yaml</code> specifies <code>url: /v2</code>, the <code>url</code> is resolved to <code>http://localhost:3001/v2</code>.</p> <p>servers / info / externalDocs / OAuth2 模块都能用</p></blockquote> <p><strong>模板</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">servers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//<span class="token punctuation">{</span>customerId<span class="token punctuation">}</span>.saas<span class="token punctuation">-</span>app.com<span class="token punctuation">:</span><span class="token punctuation">{</span>port<span class="token punctuation">}</span>/v2
+    <span class="token key atrule">variables</span><span class="token punctuation">:</span>
+      <span class="token key atrule">customerId</span><span class="token punctuation">:</span>
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> demo
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> Customer ID assigned by the service provider
+      <span class="token key atrule">port</span><span class="token punctuation">:</span>
+        <span class="token key atrule">enum</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token string">'443'</span>
+          <span class="token punctuation">-</span> <span class="token string">'8443'</span>
+        <span class="token key atrule">default</span><span class="token punctuation">:</span> <span class="token string">'443'</span>
+</code></pre></div><p><strong>使用临时服务器</strong></p> <ol><li>专门处理文件的上传与下载</li> <li>Deprecated but still functional 弃用但还能使用的接口</li></ol> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">servers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//api.example.com/v1
+<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/files</span><span class="token punctuation">:</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> File upload and download operations
+    <span class="token key atrule">servers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//files.example.com
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> Override base path for all operations with the /files path
+    <span class="token punctuation">...</span>
+  <span class="token key atrule">/ping</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">servers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//echo.example.com
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Override base path for the GET /ping operation
+</code></pre></div><hr> <h3 id="media-types"><a href="#media-types" class="header-anchor">#</a> Media Types</h3> <p><a href="https://swagger.io/docs/specification/media-types/" target="_blank" rel="noopener noreferrer">Media Types (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>可以指定 request 和 response 的媒体类型，JSON、XML、images。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>application/json
+application/xml
+application/x<span class="token punctuation">-</span>www<span class="token punctuation">-</span>form<span class="token punctuation">-</span>urlencoded <span class="token comment"># post的默认数据传输格式</span>
+multipart/form<span class="token punctuation">-</span>data
+text/plain; charset=utf<span class="token punctuation">-</span><span class="token number">8</span>
+text/html
+application/pdf
+image/png
+</code></pre></div><p>多个媒体类型使用相同的数据格式，可以写成组件。</p> <hr> <h3 id="paths-and-operations"><a href="#paths-and-operations" class="header-anchor">#</a> Paths and Operations</h3> <p><a href="https://swagger.io/docs/specification/paths-and-operations/" target="_blank" rel="noopener noreferrer">Paths and Operations (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/ping</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">responses</span><span class="token punctuation">:</span>
+        <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> OK
+</code></pre></div><p>在此基础上进行扩展</p> <ul><li>tags</li> <li>parameters</li></ul> <p><strong>路径中不能有请求参数</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># ❌</span>
+<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  /users<span class="token punctuation">?</span>role=<span class="token punctuation">{</span>role<span class="token punctuation">}</span><span class="token punctuation">:</span>
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># ✅</span>
+<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/users</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">in</span><span class="token punctuation">:</span> query
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> role
+          <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+            <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+            <span class="token key atrule">enum</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> poweruser<span class="token punctuation">,</span> admin<span class="token punctuation">]</span>
+          <span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><p><strong>不同参数的请求要有不同的路径</strong></p> <div class="language- extra-class"><pre class="language-text"><code>GET /users/findByName?firstName=value&amp;lastName=value
+GET /users/findByRole?role=value
+</code></pre></div><p><strong>可以使用临时服务器</strong></p> <hr> <h3 id="describing-parameters"><a href="#describing-parameters" class="header-anchor">#</a> Describing Parameters</h3> <p><a href="https://swagger.io/docs/specification/describing-parameters/" target="_blank" rel="noopener noreferrer">Describing Parameters (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  /users/<span class="token punctuation">{</span>userId<span class="token punctuation">}</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Get a user by ID
+      <span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">in</span><span class="token punctuation">:</span> path <span class="token comment"># 定义参数类型 path/query/header/cookie</span>
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> userId
+          <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+            <span class="token key atrule">type</span><span class="token punctuation">:</span> integer
+          <span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Numeric ID of the user to get
+</code></pre></div><p><strong>在 query 类型参数中需要对特殊字符进行编码</strong></p> <blockquote><p>schema 和 content 关键词用来描述参数内容</p> <p>content 用来处理复杂的序列化情况。</p></blockquote> <p>必填参数和默认参数不能一起使用。</p> <p>可以指定一组固定的参数。</p> <p>可以有空值和 NULL 值。</p> <p>get、delete 等关键词可以和 parameters 平级，也可以在内部覆盖 parameters 关键词。</p> <hr> <h3 id="parameter-serialization"><a href="#parameter-serialization" class="header-anchor">#</a> Parameter Serialization</h3> <p><a href="https://swagger.io/docs/specification/serialization/" target="_blank" rel="noopener noreferrer">参数序列化<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>Serialization means translating data structures or object state into a format that can be transmitted and reconstructed later.</p> <p>把数据或对象转换成可以传输的形式，并且之后可以还原。</p></blockquote> <p>通过两个关键字来控制：</p> <ul><li>style 如果界定多个值，取决于参数类型</li> <li>explode 是否数组和对象中的每个内容单独生成参数</li></ul> <p><strong>不同的组合在传输数值、数组、对象的时候有不同的 uri 形式。</strong></p> <hr> <h3 id="request-body"><a href="#request-body" class="header-anchor">#</a> Request Body</h3> <p><a href="https://swagger.io/docs/specification/describing-request-body/" target="_blank" rel="noopener noreferrer">请求数据<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Request Body 默认是可选的。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/avatar</span><span class="token punctuation">:</span>
+    <span class="token key atrule">put</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Upload an avatar
+      <span class="token key atrule">requestBody</span><span class="token punctuation">:</span>
+        <span class="token key atrule">content</span><span class="token punctuation">:</span>
+          <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+            <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+              <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/Pet'</span>
+            <span class="token key atrule">example</span><span class="token punctuation">:</span>
+              <span class="token key atrule">name</span><span class="token punctuation">:</span> Fluffy
+              <span class="token key atrule">petType</span><span class="token punctuation">:</span> dog
+</code></pre></div><p><code>content</code> 可以使用通配符。</p> <p><strong>可以配置文件上传</strong></p> <hr> <h3 id="responses"><a href="#responses" class="header-anchor">#</a> Responses</h3> <p><a href="https://swagger.io/docs/specification/describing-responses/" target="_blank" rel="noopener noreferrer">响应数据<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>每个api 行为都要有响应数据。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/users</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Get all users
+      <span class="token key atrule">responses</span><span class="token punctuation">:</span>
+        <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> A list of users
+          <span class="token key atrule">content</span><span class="token punctuation">:</span>
+            <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/ArrayOfUsers'</span>
+            <span class="token key atrule">application/xml</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/ArrayOfUsers'</span>
+            <span class="token key atrule">text/plain</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+</code></pre></div><p>如果需要返回文件一般是二进制数据格式。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/report</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Returns the report in the PDF format
+      <span class="token key atrule">responses</span><span class="token punctuation">:</span>
+        <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> A PDF file
+          <span class="token key atrule">content</span><span class="token punctuation">:</span>
+            <span class="token key atrule">application/pdf</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+                <span class="token key atrule">format</span><span class="token punctuation">:</span> binary
+</code></pre></div><hr> <h3 id="data-types"><a href="#data-types" class="header-anchor">#</a> Data Types</h3> <p><a href="https://swagger.io/docs/specification/data-models/data-types/" target="_blank" rel="noopener noreferrer">Data Types (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>string (this includes dates and files)</li> <li>number</li> <li>integer</li> <li>boolean</li> <li>array</li> <li>object</li></ul> <hr> <h3 id="adding-examples"><a href="#adding-examples" class="header-anchor">#</a> Adding Examples</h3> <p><a href="https://swagger.io/docs/specification/adding-examples/" target="_blank" rel="noopener noreferrer">Adding Examples (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>使用示例值给用户提示、生成模拟请求。</p> <p>示例也可以写成组件再引用，简化格式。</p> <hr> <h3 id="tags"><a href="#tags" class="header-anchor">#</a> Tags</h3> <p>直接加就行。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/pet/findByStatus</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Finds pets by Status
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> pets
+      <span class="token punctuation">...</span>
+  <span class="token key atrule">/pet</span><span class="token punctuation">:</span>
+    <span class="token key atrule">post</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Adds a new pet to the store
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> pets
+      <span class="token punctuation">...</span>
+  <span class="token key atrule">/store/inventory</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Returns pet inventories
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> store
+      <span class="token punctuation">...</span>
+</code></pre></div><h3 id="认证授权"><a href="#认证授权" class="header-anchor">#</a> 认证授权</h3> <p><a href="https://swagger.io/docs/specification/authentication/" target="_blank" rel="noopener noreferrer">Authentication (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>Authentication and Authorization</p> <p>身份验证、授权</p></blockquote> <p>OpenAPI 使用术语**安全方案（security scheme）**来描述认证和授权。</p> <p><strong>🟠如何使用</strong></p> <ol><li><p>使用 <code>securitySchemes</code> 关键词来创建<strong>多个</strong>安全方案。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">components</span><span class="token punctuation">:</span>
+  <span class="token key atrule">securitySchemes</span><span class="token punctuation">:</span>
+    <span class="token key atrule">BasicAuth</span><span class="token punctuation">:</span>
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> http
+      <span class="token key atrule">scheme</span><span class="token punctuation">:</span> basic
+      <span class="token comment"># 具体的方法看文档中相应的方案</span>
+</code></pre></div></li> <li><p>使用 <code>security</code> 来在整个 API 或单个行为上应用<strong>选择的</strong>安全方案。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">security</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">ApiKeyAuth</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">OAuth2</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> read
+      <span class="token punctuation">-</span> write
+<span class="token comment"># The syntax is:</span>
+<span class="token comment"># - scheme name:</span>
+<span class="token comment">#     - scope 1</span>
+<span class="token comment">#     - scope 2</span>
+
+<span class="token comment"># specific operations</span>
+<span class="token key atrule">paths</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/users</span><span class="token punctuation">:</span>
+    <span class="token key atrule">get</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Get a list of users
+      <span class="token key atrule">security</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">OAuth2</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>read<span class="token punctuation">]</span>     <span class="token comment"># &lt;------</span>
+      <span class="token punctuation">...</span>
+    <span class="token key atrule">post</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> Add a user
+      <span class="token key atrule">security</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">OAuth2</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>write<span class="token punctuation">]</span>    <span class="token comment"># &lt;------</span>
+      <span class="token punctuation">...</span>
+</code></pre></div></li></ol> <p><strong>Scopes</strong></p> <p>只有 OAuth 2 and  两种安全方案可以使用 scopes（作用域），其余的不使用 scope 只能写空数组 <code>[]</code> 。</p> <p>在 <code>security</code> 模块使用的 scope 必须要在 <code>securitySchemes</code> 模块中提前声明。</p> <p>作用域可以被 override 覆写。</p> <p><strong>认证的组合</strong></p> <p>可以使用多种认证组合。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># can use either OAuth 2 or a pair of API keys</span>
+<span class="token key atrule">security</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">oauth2</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>scope1<span class="token punctuation">,</span> scope2<span class="token punctuation">]</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">apiKey1</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token key atrule">apiKey2</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+</code></pre></div><hr> <p><strong>🟢认证方法</strong></p> <ul><li>HTTP 认证，使用 <code>Authorization</code> 标头
+<ul><li>Basic，只发送 base64 编码的用户名和密码</li> <li>Bear，<strong>token authentication</strong>，前端要发送后端生成的 token</li></ul></li> <li>API Keys，header / query string / cookies 都可以，可以使用多个 Key，其实也是 <strong>Token</strong></li> <li><strong>Cookie</strong>，会有跨站请求攻击风险 CSRF，每个请求都要带着 cookie</li> <li>OAuth 2.0 / OpenID Connect Discovery，复杂，以后再说吧，但是不能控制复杂的权限了（也用不上）。</li></ul> <p><a href="https://swagger.io/docs/specification/authentication/cookie-authentication/" target="_blank" rel="noopener noreferrer">Cookie Authentication (swagger.io)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="标准结构"><a href="#标准结构" class="header-anchor">#</a> 标准结构</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">path</span><span class="token punctuation">:</span>
+  <span class="token key atrule">/user</span><span class="token punctuation">:</span>
+    <span class="token key atrule">post</span><span class="token punctuation">:</span>
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> user
+    <span class="token key atrule">summary</span><span class="token punctuation">:</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span>
+    <span class="token key atrule">operationId</span><span class="token punctuation">:</span> getPostById
+    <span class="token punctuation">[</span>requestBody<span class="token punctuation">]</span>
+    <span class="token key atrule">responses</span><span class="token punctuation">:</span>
+      <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+        <span class="token key atrule">description</span><span class="token punctuation">:</span>
+        <span class="token key atrule">content</span><span class="token punctuation">:</span>
+            <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">required</span><span class="token punctuation">:</span>
+                  <span class="token punctuation">-</span> id
+                <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">id</span><span class="token punctuation">:</span>
+                    <span class="token key atrule">type</span><span class="token punctuation">:</span>
+                    <span class="token key atrule">description</span><span class="token punctuation">:</span>
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">requestBody</span><span class="token punctuation">:</span>
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> 发送新文章的内容
+        <span class="token key atrule">content</span><span class="token punctuation">:</span>
+          <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+            <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+              <span class="token key atrule">required</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> title
+                <span class="token punctuation">-</span> content
+                <span class="token punctuation">-</span> updateAt
+              <span class="token key atrule">type</span><span class="token punctuation">:</span> object
+              <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+                <span class="token key atrule">title</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">type</span><span class="token punctuation">:</span> string
+                  <span class="token key atrule">description</span><span class="token punctuation">:</span> 文章标题
+
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">parameters</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> pid
+<span class="token key atrule">in</span><span class="token punctuation">:</span> path
+<span class="token key atrule">description</span><span class="token punctuation">:</span> post id
+<span class="token key atrule">required</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">schema</span><span class="token punctuation">:</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> integer
+<span class="token key atrule">format</span><span class="token punctuation">:</span> int64
+</code></pre></div><div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">responses</span><span class="token punctuation">:</span>
+        <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Successful operation
+          <span class="token key atrule">content</span><span class="token punctuation">:</span>
+            <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/Pet'</span>          
+            <span class="token key atrule">application/xml</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/Pet'</span>
+        <span class="token key atrule">'400'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Invalid ID supplied
+        <span class="token key atrule">'404'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Pet not found
+        <span class="token key atrule">'405'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Validation exception
+          
+<span class="token key atrule">responses</span><span class="token punctuation">:</span>
+        <span class="token key atrule">'200'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> 创建成功 返回id
+          <span class="token key atrule">content</span><span class="token punctuation">:</span>
+            <span class="token key atrule">application/json</span><span class="token punctuation">:</span>
+              <span class="token key atrule">schema</span><span class="token punctuation">:</span>
+                <span class="token key atrule">$ref</span><span class="token punctuation">:</span> <span class="token string">'#/components/schemas/Post'</span>          
+        <span class="token key atrule">'400'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Invalid ID supplied
+        <span class="token key atrule">'404'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Pet not found
+        <span class="token key atrule">'405'</span><span class="token punctuation">:</span>
+          <span class="token key atrule">description</span><span class="token punctuation">:</span> Validation exception
+</code></pre></div><h2 id="swagger-tools"><a href="#swagger-tools" class="header-anchor">#</a> Swagger Tools</h2> <p><img src="https://cdn.jsdelivr.net/gh/Nova-mist/HexoBlogResources/images/2022/202208141718584.png" alt="image-20220814171812030"></p> <blockquote><p>使用流程</p> <ol><li>Swagger Editor 编写实时交互的接口定义</li> <li>Swagger Codegen 使用定义好的接口来生成模板代码</li> <li>Swagger UI 渲染接口文档、测试</li></ol></blockquote> <h3 id="swagger-editor"><a href="#swagger-editor" class="header-anchor">#</a> Swagger Editor</h3> <p><a href="https://github.com/swagger-api/swagger-editor" target="_blank" rel="noopener noreferrer">swagger-api/swagger-editor: Swagger Editor (github.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>使用 Docker 安装，是一个网页 App</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> pull swaggerapi/swagger-editor
+
+<span class="token comment"># 挂载的配置文件就是最后导出的JSON文件</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">8070</span>:8080 <span class="token parameter variable">-v</span> /home/ysama/swagger:/home/tmp <span class="token parameter variable">-e</span> <span class="token assign-left variable">SWAGGER_FILE</span><span class="token operator">=</span>/home/tmp/swagger.json swaggerapi/swagger-editor
+</code></pre></div><p>http://localhost:8070/</p> <h3 id="swagger-ui"><a href="#swagger-ui" class="header-anchor">#</a> Swagger UI</h3> <p><a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="noopener noreferrer">swagger-api/swagger-ui: Swagger UI is a collection of HTML, JavaScript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API. (github.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>使用 Docker 安装，是一个网页 App</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 把配置文件复制到挂载目录</span>
+<span class="token function">ls</span> /mnt/c/users/ysama/downloads/
+<span class="token function">sudo</span> <span class="token function">cp</span> /mnt/c/users/ysama/downloads/openapi.json /home/ysama/swagger/
+<span class="token function">ls</span> /home/ysama/swagger/
+
+<span class="token function">docker</span> pull swaggerapi/swagger-ui
+
+<span class="token comment"># 启动容器的时候 挂载配置文件 指定首页路径</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">8071</span>:8080 <span class="token parameter variable">-e</span> <span class="token assign-left variable">BASE_URL</span><span class="token operator">=</span>/swagger <span class="token parameter variable">-e</span> <span class="token assign-left variable">SWAGGER_JSON</span><span class="token operator">=</span>/home/tmp/openapi.json <span class="token parameter variable">-v</span> /home/ysama/swagger:/home/tmp swaggerapi/swagger-ui
+</code></pre></div><p>http://localhost:8071/swagger/</p> <p>相当于不能更改的 Editor，展示的成品。</p> <p>Editor 其实也可以实时测试。</p> <h3 id="swagger-codegen"><a href="#swagger-codegen" class="header-anchor">#</a> Swagger Codegen</h3> <p><a href="https://github.com/swagger-api/swagger-codegen" target="_blank" rel="noopener noreferrer">swagger-api/swagger-codegen: swagger-codegen contains a template-driven engine to generate documentation, API clients and server stubs in different languages by parsing your OpenAPI / Swagger definition. (github.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>安装的方法</strong></p> <ol><li>下载源码，用 maven 编译。</li> <li><strong>直接下载稳定版本的 jar 包</strong></li> <li>使用 Docker 容器。</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> /home
+<span class="token function">mkdir</span> swagger-codegen
+<span class="token builtin class-name">cd</span> swagger-codegen
+
+<span class="token function">wget</span> https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.34/swagger-codegen-cli-3.0.34.jar <span class="token parameter variable">-O</span> swagger-codegen-cli.jar
+
+<span class="token comment"># 安装 jdk</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> openjdk-8-jre-headless
+
+<span class="token comment"># 查看帮助</span>
+<span class="token function">java</span> <span class="token parameter variable">-jar</span> swagger-codegen-cli.jar <span class="token parameter variable">--help</span>
+
+<span class="token comment"># generate client</span>
+<span class="token function">sudo</span> <span class="token function">java</span> <span class="token parameter variable">-jar</span> swagger-codegen-cli.jar generate <span class="token punctuation">\</span>
+   <span class="token parameter variable">-i</span> http://petstore.swagger.io/v2/swagger.json <span class="token punctuation">\</span>
+   <span class="token parameter variable">-l</span> spring <span class="token punctuation">\</span>
+   <span class="token parameter variable">-o</span> tmp/server/petstore/springboot
+   
+<span class="token function">ls</span> tmp/server/petstore/springboot
+
+<span class="token comment"># 复制到windows桌面</span>
+<span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-r</span>  tmp/server/petstore/springboot /mnt/d/desktop/springboot
+</code></pre></div><p>🟠生成 SpringMVC 、SpringBoot 的步骤这里看 <a href="https://github.com/swagger-api/swagger-codegen/wiki/Server-stub-generator-HOWTO" target="_blank" rel="noopener noreferrer">Server stub generator HOWTO · swagger-api/swagger-codegen Wiki (github.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>直接在生成的 SpringBoot 项目中开发</strong></p> <p>http://localhost:8080/v2/hello</p> <h2 id="相关文章"><a href="#相关文章" class="header-anchor">#</a> 相关文章</h2> <p><a href="https://javascript.plainenglish.io/swagger-codegen-from-server-to-client-d6a13910ed1f" target="_blank" rel="noopener noreferrer">Swagger Codegen: From Server to Client | by Jennifer Fu | JavaScript in Plain English<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/8/2022, 2:56:58 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/NovaBlog/Tools/接口/Spring整合Swagger.html" class="prev">
+        Spring 整合 swagger
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/NovaBlog/assets/js/app.7283b6f5.js" defer></script><script src="/NovaBlog/assets/js/2.6539ea43.js" defer></script><script src="/NovaBlog/assets/js/35.b14e62bb.js" defer></script>
+  </body>
+</html>
